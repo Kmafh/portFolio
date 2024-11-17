@@ -1,0 +1,85 @@
+<nav class="navbar" *ngIf="color">
+  <div class="full-width">
+    <div class="circles">
+      <div class="circle red"></div>
+      <div class="circle green"></div>
+      <div class="circle blue"></div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="../../../../assets/img/logo.png" alt=""> 
+  </div>
+  <div class="nav-links">
+    <div class="li">
+      <button
+        mat-button
+        aria-label="Example icon button with a vertical three dot icon"
+        [matMenuTriggerFor]="menu"
+      >
+      <span class="material-symbols-rounded"> apps </span></button
+      >
+      <mat-menu #menu="matMenu" xPosition="before">
+        <div class="icon-grid">
+          <div class="icon-item">
+            <span class="material-icons">home</span>
+          </div>
+          <div class="icon-item">
+            <span class="material-icons">info</span>
+          </div>
+          <div class="icon-item">
+            <span class="material-icons">contact_page</span>
+          </div>
+          <div class="icon-item">
+            <span class="material-icons">settings</span>
+          </div>
+        </div>
+          <div class="icon-grid">
+          <div class="icon-item">
+            <span class="material-icons">help</span>
+          </div>
+          <div class="icon-item">
+            <span class="material-icons">feedback</span>
+          </div>
+          <div class="icon-item">
+            <span class="material-icons">dashboard</span>
+          </div>
+          <div class="icon-item">
+            <span class="material-symbols-rounded" (click)="color ? (color = false) : (color = true)">
+              palette
+              </span>
+          </div>
+          
+        </div>
+        
+
+      </mat-menu>
+      <button
+        mat-button
+        aria-label="Example icon button with a vertical three dot icon"
+        [matMenuTriggerFor]="menuAler"
+      >
+        <span class="material-symbols-rounded"> notifications </span></button
+
+      >
+      <mat-menu #menuAler="matMenu" xPosition="before">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button
+        mat-button
+        aria-label="Example icon button with a vertical three dot icon"
+        
+        [matMenuTriggerFor]="menuUser"
+      >
+        <span class="material-symbols-rounded"> person </span>
+      </button>
+      <mat-menu #menuUser="matMenu" xPosition="before">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

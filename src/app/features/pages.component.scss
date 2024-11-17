@@ -1,0 +1,53 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.content {
+  flex: 1;
+  display: flex; /* Permite que los elementos dentro de .content se comporten como flex-items */
+  align-items: stretch; /* Asegura que los hijos ocupen todo el espacio vertical */
+  justify-content: stretch; /* Asegura que los hijos ocupen todo el espacio horizontal */
+  padding: 0; /* Eliminar padding para que el contenedor ocupe toda la pantalla */
+  background-color: #191c1c;
+  
+}
+
+.example-container {
+ /* Permite que el contenido y el drawer se superpongan */
+  border-bottom-right-radius: 20px;
+  background-color: #191c1c;
+  margin-top: 5px;
+  width: 400px;
+
+}
+.example-sidenav {
+  padding: 20px;
+  position: absolute; /* Asegura que el sidenav quede fijo al lado */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px; /* Ancho del sidenav */
+  background-color: #191c1c;
+
+  
+}
+
+section.container {
+  flex: 1; /* El contenido principal ocupa el resto del espacio */
+  margin: 15px 30px;
+  padding-left: 20px; /* Añade un pequeño margen izquierdo para que el contenido no se sobreponga al sidenav */
+
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+}
+/* Estilos para pantallas móviles */
+@media (max-width: 600px) {
+  .container {
+    margin: 0; /* Agrega un margen inferior en pantallas móviles */
+    width: 100vh;
+  }
+}
