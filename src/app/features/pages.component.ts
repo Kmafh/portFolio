@@ -21,6 +21,7 @@ import { LeftMenuComponent } from "../layouts/main-layout/left-menu/left-menu.co
 })
 export class PagesComponent {
   drawerOpened: boolean = true;
+  drawerRightOpened: boolean = false;
   isMobile: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
@@ -36,5 +37,7 @@ export class PagesComponent {
   toggleDrawer() {
     this.drawerOpened = !this.drawerOpened;
   }
- 
+  toggleRightDrawer() {
+    this.drawerRightOpened = !this.drawerRightOpened;
+  }
 }

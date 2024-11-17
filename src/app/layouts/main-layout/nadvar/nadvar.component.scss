@@ -1,10 +1,15 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #004f4f;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #004f4f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0; /* Fija la navbar en la parte superior */
+  left: 0; /* Asegura que esté alineada al lado izquierdo */
+  width: 100%; /* Hace que ocupe todo el ancho de la página */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
   
     .logo {
       width: 27px; /* Tamaño inicial */

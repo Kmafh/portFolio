@@ -1,11 +1,11 @@
 <div class="page-container">
   <app-nadvar></app-nadvar>
-  <div class="content bg-black">
+  <div class="content ">
     <!-- Solo se muestra el mat-drawer-container en pantallas grandes -->
-    <mat-drawer-container *ngIf="!isMobile" class="example-container bg-black">
+    <mat-drawer-container *ngIf="!isMobile" class="example-container ">
       <mat-drawer
         #drawer
-        class="example-sidenav bg-black"
+        class="example-sidenav "
         mode="side"
         [opened]="drawerOpened"
       >
@@ -24,25 +24,6 @@
     <section class="container">
       <router-outlet></router-outlet>
     </section>
-
-    <!-- Solo se muestra el mat-drawer-container en pantallas grandes -->
-    <mat-drawer-container *ngIf="!isMobile" class="example-container bg-black">
-      <mat-drawer
-        #drawer
-        class="example-sidenav bg-black"
-        mode="side"
-        [opened]="drawerOpened"
-      >
-        <app-left-menu></app-left-menu>
-      </mat-drawer>
-
-      <!-- El botón para abrir/cerrar el sidenav -->
-      <button type="button" mat-stroked-button (click)="toggleDrawer()">
-        <span class="material-symbols-outlined">
-          {{ !drawerOpened ? "arrow_menu_open" : "arrow_menu_close" }}
-        </span>
-      </button>
-    </mat-drawer-container>
   </div>
   <app-footer></app-footer>
 </div>

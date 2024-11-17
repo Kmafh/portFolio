@@ -1,53 +1,64 @@
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Esto asegura que el contenedor ocupe toda la altura de la pantalla */
+  min-height: 100vh;
+  background-color: #191c1c;
+
 }
 
 .content {
   flex: 1;
-  display: flex; /* Permite que los elementos dentro de .content se comporten como flex-items */
-  align-items: stretch; /* Asegura que los hijos ocupen todo el espacio vertical */
-  justify-content: stretch; /* Asegura que los hijos ocupen todo el espacio horizontal */
-  padding: 0; /* Eliminar padding para que el contenedor ocupe toda la pantalla */
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding-top: 60px;
   background-color: #191c1c;
-  
 }
 
 .example-container {
- /* Permite que el contenido y el drawer se superpongan */
   border-bottom-right-radius: 20px;
   background-color: #191c1c;
   margin-top: 5px;
   width: 400px;
-
 }
+
+/* Estilo para el drawer en la izquierda (no cambia) */
 .example-sidenav {
   padding: 20px;
-  position: absolute; /* Asegura que el sidenav quede fijo al lado */
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 200px; /* Ancho del sidenav */
+  width: 200px;
   background-color: #191c1c;
 
-  
+}
+
+/* Estilo para el drawer en la derecha */
+.right-drawer {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0; /* Cambia la posición del drawer para que se desplace hacia la derecha */
+  height: 100%;
+  width: 200px;
+  background-color: #191c1c;
 }
 
 section.container {
-  flex: 1; /* El contenido principal ocupa el resto del espacio */
+  flex: 1;
   margin: 15px 30px;
-  padding-left: 20px; /* Añade un pequeño margen izquierdo para que el contenido no se sobreponga al sidenav */
-
+  padding-left: 20px;
 }
 
 .material-symbols-outlined {
   cursor: pointer;
 }
-/* Estilos para pantallas móviles */
+
+/* Para pantallas móviles */
 @media (max-width: 600px) {
   .container {
-    margin: 0; /* Agrega un margen inferior en pantallas móviles */
+    margin: 0;
     width: 100vh;
   }
 }
