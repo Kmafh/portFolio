@@ -7,10 +7,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ImageSliderComponent } from "../../shared/components/image-slider/image-slider.component";
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [MatCardModule,MatButtonModule,MatSidenavModule,MatIconModule,MatInputModule,MatFormFieldModule],
+  imports: [MatCardModule, MatButtonModule, MatSidenavModule, MatIconModule, MatInputModule, MatFormFieldModule, ImageSliderComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
