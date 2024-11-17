@@ -29,6 +29,12 @@ body { margin: 0; color:azure; font-family: "Geist Mono", monospace;
     border: 1px solid #3f4948;
   }
 
+  .border-b{
+    border-bottom: 1px solid #3f4948;
+  }
+  .border-t{
+    border-top: 1px solid #3f4948;
+  }
   .bg-black {
     background-color: #191c1c;
 
@@ -36,5 +42,12 @@ body { margin: 0; color:azure; font-family: "Geist Mono", monospace;
   span{
     padding-top: 5px;
   }
-
+  .img-circle-fixed {
+    width: 50px; /* Ancho fijo */
+    height: 50px; /* Altura fija */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Ajusta la imagen al contenedor sin deformarla */
+    overflow: hidden; /* Oculta cualquier contenido sobrante */
+  }
+  
   

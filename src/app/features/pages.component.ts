@@ -20,7 +20,7 @@ import { LeftMenuComponent } from "../layouts/main-layout/left-menu/left-menu.co
   styleUrl: './pages.component.scss'
 })
 export class PagesComponent {
-  drawerOpened: boolean = false;
+  drawerOpened: boolean = true;
   isMobile: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
